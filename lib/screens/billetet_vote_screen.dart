@@ -22,11 +22,13 @@ class BilletinVoteScreen extends StatelessWidget {
       body: BlocBuilder<BulletinBloc, BulletinState>(
         builder: (context, state) {
           if (state is BulletinLoadedSuccess) {
-            return Column(
-              children: [
-                BulletinTile(candidat: state.data[0]),
-                BulletinTile(candidat: state.data[1]),
-              ],
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  BulletinTile(candidat: state.data[0]),
+                  BulletinTile(candidat: state.data[1]),
+                ],
+              ),
             );
           }
           return Container();

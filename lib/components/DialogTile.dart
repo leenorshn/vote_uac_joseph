@@ -13,7 +13,7 @@ class DialogTile extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
         padding: const EdgeInsets.all(20),
-        height: MediaQuery.of(context).size.height / 2,
+        height: MediaQuery.of(context).size.height * 0.6,
         child: Column(
           children: [
             ClipRRect(
@@ -44,7 +44,7 @@ class DialogTile extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),
-                    fixedSize: Size(140, 44),
+                    fixedSize: Size(100, 44),
                     backgroundColor: Colors.pink,
                     foregroundColor: Colors.white,
                     elevation: 0,
@@ -60,7 +60,7 @@ class DialogTile extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),
-                    fixedSize: Size(140, 44),
+                    fixedSize: Size(110, 44),
                     elevation: 0,
                   ),
                   onPressed: onTap,

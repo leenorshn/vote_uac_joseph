@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vote_uac_joseph/blocs/President/president_bloc.dart';
 import 'package:vote_uac_joseph/blocs/bulletin/bulletin_bloc.dart';
@@ -10,6 +11,11 @@ import 'package:vote_uac_joseph/screens/vote_vice_president_screen.dart';
 import 'blocs/VicePresident/vice_president_bloc.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp,
+  ]);
   runApp(const MyApp());
 }
 
